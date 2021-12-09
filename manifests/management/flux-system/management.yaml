@@ -13,6 +13,3 @@ spec:
   path: ./manifests/management
   prune: true
   validation: client
-  kubeConfig:
-    secretRef:
-      name: management-kubeconfig

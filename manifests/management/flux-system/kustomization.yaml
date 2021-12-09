@@ -5,6 +5,7 @@ resources:
   - cluster0.yaml
   - cluster1.yaml
   - cluster2.yaml
+  - clusters.yaml
   - management.yaml
   - git-repository.yaml
   - gotk-components.yaml
