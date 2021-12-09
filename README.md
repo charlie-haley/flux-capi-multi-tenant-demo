@@ -1,4 +1,4 @@
-# Flux, Cluster API Multi-Tenancy Demo
+# Flux, Cluster API, Multi-Tenancy Demo
 
 ## Requirements
 - [clusterctl](https://github.com/kubernetes-sigs/cluster-api/tree/main/cmd/clusterctl)
@@ -12,18 +12,18 @@
 │   └── cluster2.yaml
 └── manifests           # These manifests are deployed onto the various clusters, including workload and management.
     ├── _base
-    │   ├── flux-system # The manifests needed to deploy flux
+    │   ├── base-namespace
     │   └── ...
     ├── cluster0
-    │   ├── monitoring
+    │   ├── foo-namespace
     │   └── ...
     ├── cluster1
-    │   ├── foo
+    │   ├── monitoring
     │   └── ...
     ├── cluster2
     │   └── ...
     └── management
-    │   ├── flux-system
+    │   ├── flux-system # The manifests needed to deploy and configure Flux
     │   └── ...
 ```
 
@@ -48,4 +48,15 @@ kubectl create namespace flux-system
 
 # bootstrap flux onto the management cluster - you may need to run this twice due to race conditions
 kubectl apply -k ./manifests/management
+```
+
+## ✅ Validating
+
+```bash
+kubectl get clusters -A
+
+NAMESPACE   NAME       AGE     PHASE
+default     cluster0   5m58s   Provisioned
+default     cluster1   5m58s   Provisioned
+default     cluster2   5m58s   Provisioned
 ```
