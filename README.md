@@ -34,9 +34,6 @@ This is one of the initial manual tasks needed, this should only need doing once
 # create cluster using k3d - you can also minikube, kind etc.
 k3d cluster create management-test
 
-# get kubeconfig
-k3d kubeconfig get management-test > kubeconfig
-
 # clusterctl init (! this uses your current kube context !)
 clusterctl init --infrastructure docker
 ```
