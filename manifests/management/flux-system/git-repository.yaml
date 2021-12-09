@@ -7,5 +7,5 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: master
+    branch: main
   url: https://github.com/charlie-haley/flux-capi-multi-tenant-demo
