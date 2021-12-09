@@ -1,0 +1,8 @@
+---
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+commonLabels:
+  topology.kubernetes.io/region: eu-west-3
+  cluster: pop-gslb-eu-west-3
+bases:
+  - ../_base
