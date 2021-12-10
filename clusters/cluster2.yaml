@@ -75,7 +75,7 @@ spec:
       name: cluster2-control-plane
       namespace: default
   replicas: 3
-  version: v1.24.0
+  version: v1.22.4
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1alpha4
 kind: DockerMachineTemplate
@@ -124,4 +124,4 @@ spec:
         kind: DockerMachineTemplate
         name: cluster2-md-0
         namespace: default
-      version: v1.24.0
+      version: v1.22.4
