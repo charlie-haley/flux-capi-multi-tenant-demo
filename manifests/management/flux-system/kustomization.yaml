@@ -2,10 +2,6 @@
 kind: Kustomization
 apiVersion: kustomize.config.k8s.io/v1beta1
 resources:
-  - cluster0.yaml
-  - cluster1.yaml
-  - cluster2.yaml
-  - clusters.yaml
-  - management.yaml
+  - sync
   - git-repository.yaml
   - gotk-components.yaml
